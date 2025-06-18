@@ -23,17 +23,6 @@ export interface City {
 
 export const useAppStore = defineStore("appStore", () => {
   const searchBarInput = ref("");
-  const currentLocationData = ref({
-    lat: 0,
-    lon: 0,
-    temp: 0,
-    temp_max: 0,
-    temp_min: 0,
-    weather: "",
-    name: "",
-    state: "",
-    currentTime: new TZDate(),
-  });
   const selectedCity = ref<City>({
     item: {
       id: 0,
@@ -93,7 +82,6 @@ export const useAppStore = defineStore("appStore", () => {
 
   return {
     searchBarInput,
-    currentLocationData,
     selectedCity,
     selectedCities,
     showAddIcon,
